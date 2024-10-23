@@ -1,0 +1,244 @@
+:root {
+  --text-primary: #101d42;
+  --text-secondary: #fbb44c;
+  --text-dark: #2b2922;
+  --text-light: #eaeaea ;
+  --text-white: #fff;
+
+  --bg-primary: #141e4c;
+  --bg-secondary: #dfedf5;
+  --bg-dark: #101d42;
+  --bg-light: #fff;
+
+  --fs-large: 1rem;
+  --fs-medium: 0.875rem;
+  --fs-small: 0.75rem;
+
+  --spacing-xl: 2.625rem;
+  --spacing-large: 1.75rem;
+  --spacing-medium: 1rem;
+  --spacing-small: 0.5rem;
+  --spacing-tiny: 0.25rem;
+
+  --nav-height: 6rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* general stuff */
+ul {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: var(--text-light);
+}
+
+h2 {
+  font-size: 1.75rem;
+  color: var(--text-primary);
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+}
+
+p {
+  font-size: var(--fs-medium);
+  color: var(--text-dark);
+}
+
+/* advanced classes */
+.faded-text {
+  color: rgba(25, 30, 48, 0.4);
+  font-size: var(--fs-medium);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.button-green {
+  background-color: rgb(0, 135, 104);
+  border: 0;
+  color: var(--text-light);
+  width: fit-content;
+  font-size: var(--fs-large);
+  padding: var(--spacing-medium);
+  border-radius: 2.4rem;
+  transition: .2s ease-in;
+}
+
+.button-green:hover {
+  background-color: rgb(0, 115, 104);
+  cursor: pointer;
+}
+
+/* navigation bar */
+nav .nav-container{
+  background-color: var(--bg-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-medium);
+  height: var(--nav-height);
+}
+
+nav img {
+  width: auto;
+  height: 60px;
+}
+
+.logo-link {
+  padding: 0;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  font-size: var(--fs-small);
+  text-transform: uppercase;
+  color: var(--text-light);
+  padding: var(--spacing-medium);
+}
+
+nav .arrow-down-icon {
+  font-size: var(--fs-large);
+  position: absolute;
+}
+
+nav .menu-icon {
+color: var(--text-light);
+display:none;
+}
+
+nav input[type="checkbox"] {
+    display:none;
+}
+
+nav a:hover {
+    color: var(--text-secondary);
+}
+
+nav .submenu{
+/* initial submeniul nu este afisat. afisarea sa se face la hover pe parinte */
+  display:none;
+  position:absolute;
+  top: calc(100% - var(--spacing-small));
+  left: var(--spacing-medium);
+
+  width: 10rem;
+  padding:var(--spacing-tiny) 0;
+
+  background-color: var(--bg-dark);
+  z-index: 3;
+}
+
+nav .submenu a {
+  padding: var(--spacing-tiny) var(--spacing-small);
+}
+
+/* atentie la acest selector! display:block se aplica pe lementul cu clasa submenu< doar atunci cand parintele cu clasa about us are hover! */
+
+nav .about-us:hover .submenu{
+    display: block;
+}
+
+/* stilizarea pt mobil */
+
+@media (max-width: 768px) {
+  nav img {
+      height: 80px;
+  }
+
+  /* ascundem linkurile si afisam icontia de meniu, la pachet cu checkboxul
+  de asemenea, ascundem submeniul(intrucat am avea nevoide de JS ca sa il facem pe mobil) si iconita ce indica prezenta lui */
+  nav ul {
+    display: none;
+  }
+
+  nav .menu-icon {
+      display:block;
+  }
+
+  nav .arrow-down-icon{
+      display:none;
+  }
+  nav .about-us:hover .submenu{
+      display:none;
+  }
+  nav .menu-icon-container{
+      position:relative;
+  }
+  /* un nou tip de selector: selectam inputul care are ca atribut type="checkbox" */
+  nav input[type="checkbox"] {
+      display:block;
+      /* practic punem checkboxul deasupra iconitei de meniu */
+      position:absolute;
+      top: 0;
+      left: 0;
+
+      height: 100%;
+      width: 100%;
+    /* atentie, opacity 0 ascunde vizual elementul, dar el este inca prezent pe ecran */
+      opacity:0;
+
+      margin:0;
+
+      /* schimbam afisajul cursorului mouseului */
+      cursor: pointer;
+  }
+
+  /* doua tipuri noi de selector:
+  1. input:checked => elementul este stilizat doar daca checkbox-ul se afla in starea checked.
+  2. input:checked ~ ul => aplica CSS-ul doar pt fratii(de acleasi nivel) lui input:checked aflati sub el ca ordine.
+  evident doar fratii care sunt ul */
+
+
+  nav input[type="checkbox"]:checked ~ ul {
+    display:block;
+    width:100%;
+
+    position:fixed;
+    /* unde se afiseaza extins pe mobil? pai imediat sub nav. cum calculam cat are nav-ul? dimensiunea logo-ului + padding */
+    top: calc(var(--mobile-logo-height) + 2 * var(--spacing-medium));
+    left: 0;
+    background-color: var(--bg-dark);
+  }
+}
+
+footer {
+  background-color: var(--bg-dark);
+}
+
+footer p {
+  font-size: var(--fs-small);
+  text-align:center;
+  color: var(--text-light);
+  padding: var(--spacing-medium) 0;
+}
+
+
+

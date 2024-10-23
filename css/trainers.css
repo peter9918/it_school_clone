@@ -1,0 +1,53 @@
+.hero {
+  background-color: var(--bg-primary);
+  padding: 6rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--text-light);
+}
+
+main {
+  background-color: var(--bg-secondary);
+  display: flex;
+  padding: 2rem;
+  gap: var(--spacing-large);
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main-left, .main-right {
+  max-width: 576px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-small);
+}
+
+/* trainer cards */
+.trainers {
+  background-color: var(--bg-light);
+  margin-top: var(--spacing-large);
+  padding: var(--spacing-medium);
+}
+
+.trainer-card {
+  display: flex;
+  gap: var(--spacing-medium);
+  padding: var(--spacing-medium);
+  border-radius: 1.6rem;
+  box-shadow: rgba(25, 30, 48, 0.1) 0px 3rem 6rem 0px;
+  background-color: var(--bg-light);
+}
+
+.trainer-card img {
+  filter: grayscale(1);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}

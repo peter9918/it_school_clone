@@ -1,0 +1,41 @@
+.hero {
+  background-color: var(--bg-primary);
+  padding: 6rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  gap: var(--spacing-large);
+  padding: var(--spacing-medium);
+}
+
+.main-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-right p a {
+  display: inline;
+  color: rgb(0, 135, 104);
+}
+
+.main-right img {
+  width: 2rem;
+}
+
+.main-right ul li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+}
+
+.main-right ul a,
+.main-right ul p {
+  font-size: var(--fs-large);
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
