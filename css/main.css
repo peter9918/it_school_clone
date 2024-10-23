@@ -29,6 +29,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -118,7 +121,7 @@ nav .nav-container{
 
 nav img {
   width: auto;
-  height: 60px;
+  width: 160px;
 }
 
 .logo-link {
@@ -128,7 +131,6 @@ nav img {
 nav ul {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 nav li {
@@ -180,7 +182,13 @@ nav .about-us:hover .submenu{
 }
 
 .dropdown-menu {
-  background-color: var(--bg-light);
+  background-color: var(--bg-dark);
+  padding: var(--spacing-tiny) var(--spacing-small);
+}
+
+.dropdown-menu li a {
+  
+  color: var(--bg-light);
 }
 
 footer {

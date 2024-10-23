@@ -1,3 +1,7 @@
+body {
+  height: 100vh;
+}
+
 .hero {
   background-color: var(--bg-primary);
   padding: 6rem 1rem;
@@ -11,6 +15,8 @@ main {
   gap: var(--spacing-large);
   padding: var(--spacing-medium);
 }
+
+
 
 .main-right {
   display: flex;
@@ -37,5 +43,12 @@ main {
   font-size: var(--fs-large);
   font-weight: 600;
   color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-wrap: wrap;
+  }
+  
 }
 

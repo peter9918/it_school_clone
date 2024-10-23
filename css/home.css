@@ -31,7 +31,7 @@
   top: var(--spacing-tiny);
 }
 
-.welcome .container{
+.welcome .welcome-container{
   height:100%;
   display:flex;
   flex-direction: column;
@@ -45,27 +45,25 @@
 }
 
 @media (max-width: 768px) {
-.welcome h1 {
-  font-size: 2.5rem;
-}
-.welcome p:last-of-type{
-  margin-bottom: 0;
-}
-.welcome img {
-  display:block;
+  .welcome h1 {
+    font-size: 2.5rem;
+  }
+  .welcome p:last-of-type{
+    margin-bottom: 0;
+  }
+  .welcome img {
+    display:block;
 
-  margin-top: var(--spacing-medium);
-  margin-left: var(--spacing-small);
-}
+    margin-top: var(--spacing-medium);
+    margin-left: var(--spacing-small);
+  }
 
-.welcome .button-green{
-  /* ascundem butonul pe mobil */
-  display:none;
-}
+  .welcome .button-green{
+    /* ascundem butonul pe mobil */
+    display:none;
+  }
 
-.welcome {
-  padding-bottom: 4rem;
-}
-
-
+  .welcome {
+    padding-bottom: 4rem;
+  }
 }
