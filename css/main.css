@@ -19,8 +19,6 @@
   --spacing-medium: 1rem;
   --spacing-small: 0.5rem;
   --spacing-tiny: 0.25rem;
-
-  --nav-height: 6rem;
 }
 
 * {
@@ -83,8 +81,28 @@ p {
   transition: .2s ease-in;
 }
 
-.button-green:hover {
+.button-green:hover,
+.button-green:focus {
+  color: var(--text-light);
   background-color: rgb(0, 115, 104);
+  cursor: pointer;
+}
+
+.button-blue {
+  background-color: var(--bg-primary);
+  border: 0;
+  color: var(--text-light);
+  width: fit-content;
+  font-size: var(--fs-large);
+  padding: var(--spacing-medium);
+  border-radius: 2.4rem;
+  transition: .2s ease-in;
+}
+
+.button-blue:hover,
+.button-blue:focus {
+  color: var(--text-light);
+  background-color: var(--text-primary);
   cursor: pointer;
 }
 
@@ -95,7 +113,7 @@ nav .nav-container{
   justify-content: space-between;
   align-items: center;
   padding: var(--spacing-medium);
-  height: var(--nav-height);
+  /* height: var(--nav-height); */
 }
 
 nav img {
@@ -129,15 +147,6 @@ nav .arrow-down-icon {
   position: absolute;
 }
 
-nav .menu-icon {
-color: var(--text-light);
-display:none;
-}
-
-nav input[type="checkbox"] {
-    display:none;
-}
-
 nav a:hover {
     color: var(--text-secondary);
 }
@@ -166,67 +175,12 @@ nav .about-us:hover .submenu{
     display: block;
 }
 
-/* stilizarea pt mobil */
+.hamburger-menu-container {
+  display: none;
+}
 
-@media (max-width: 768px) {
-  nav img {
-      height: 80px;
-  }
-
-  /* ascundem linkurile si afisam icontia de meniu, la pachet cu checkboxul
-  de asemenea, ascundem submeniul(intrucat am avea nevoide de JS ca sa il facem pe mobil) si iconita ce indica prezenta lui */
-  nav ul {
-    display: none;
-  }
-
-  nav .menu-icon {
-      display:block;
-  }
-
-  nav .arrow-down-icon{
-      display:none;
-  }
-  nav .about-us:hover .submenu{
-      display:none;
-  }
-  nav .menu-icon-container{
-      position:relative;
-  }
-  /* un nou tip de selector: selectam inputul care are ca atribut type="checkbox" */
-  nav input[type="checkbox"] {
-      display:block;
-      /* practic punem checkboxul deasupra iconitei de meniu */
-      position:absolute;
-      top: 0;
-      left: 0;
-
-      height: 100%;
-      width: 100%;
-    /* atentie, opacity 0 ascunde vizual elementul, dar el este inca prezent pe ecran */
-      opacity:0;
-
-      margin:0;
-
-      /* schimbam afisajul cursorului mouseului */
-      cursor: pointer;
-  }
-
-  /* doua tipuri noi de selector:
-  1. input:checked => elementul este stilizat doar daca checkbox-ul se afla in starea checked.
-  2. input:checked ~ ul => aplica CSS-ul doar pt fratii(de acleasi nivel) lui input:checked aflati sub el ca ordine.
-  evident doar fratii care sunt ul */
-
-
-  nav input[type="checkbox"]:checked ~ ul {
-    display:block;
-    width:100%;
-
-    position:fixed;
-    /* unde se afiseaza extins pe mobil? pai imediat sub nav. cum calculam cat are nav-ul? dimensiunea logo-ului + padding */
-    top: calc(var(--mobile-logo-height) + 2 * var(--spacing-medium));
-    left: 0;
-    background-color: var(--bg-dark);
-  }
+.dropdown-menu {
+  background-color: var(--bg-light);
 }
 
 footer {
@@ -238,6 +192,15 @@ footer p {
   text-align:center;
   color: var(--text-light);
   padding: var(--spacing-medium) 0;
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu-container {
+    display: block;
+  }
+  .menu-icon-container {
+    display: none;
+  }
 }
 
 

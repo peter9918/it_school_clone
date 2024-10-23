@@ -27,35 +27,47 @@
 <body>
 
   <nav>
-    <div class="nav-container">  
-      <a href="index.html" class="logo-link">
+    <div class="nav-container">
+      <a href="../index.html" class="logo-link">
         <img src="../images/logo.png" alt="itschool logo"/>
       </a>
       <div class="menu-icon-container">
-        <span class="material-symbols-outlined menu-icon"> menu </span>
-        <input type="checkbox" />
-        <ul>
+          <ul>
             <li>
-              <a href="courses.html"> Cursuri Online</a>
+              <a href="courses.html">Cursuri Online</a>
             </li>
 
             <li class="about-us">
-                <a href="pages/about.html">
-                    Despre noi
-                    <span class="material-symbols-outlined arrow-down-icon">
-                      arrow_drop_down
-                    </span>
-                </a>
-            <div class="submenu">
-              <a href="../index.html">IT School</a>
-              <a href="about.html">Despre noi</a>
-              <a href="trainers.html">Traineri</a>
-            </div>
-        
+              <a href="about.html">
+                  Despre noi
+                  <span class="material-symbols-outlined arrow-down-icon">
+                    arrow_drop_down
+                  </span>
+              </a>
+              <div class="submenu">
+                <a href="../index.html">IT School</a>
+                <a href="trainers.html">Traineri</a>
+                <a href="about.html">Despre noi</a>
+              </div>
             </li>
+
             <li>
-                <a href="contact.html">Contact</a>
+              <a href="contact.html">Contact</a>
             </li>
+          </ul>
+      </div>
+      <!-- dropdown menu for mobile -->
+      <div class="dropdown hamburger-menu-container">
+        <button class="btn button-blue dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="material-symbols-outlined">
+            menu
+          </span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a href="courses.html" class="dropdown-item"></a>Cursuri online</li>
+          <li><a href="about.html" class="dropdown-item"></a>Despre noi</li>
+          <li><a href="trainers.html" class="dropdown-item"></a>Traineri</li>
+          <li><a href="contact.html" class="dropdown-item"></a>Contact</li>
         </ul>
       </div>
     </div>

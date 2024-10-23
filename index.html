@@ -20,76 +20,90 @@
    rel="stylesheet"
    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
  />
+ <!-- bootstrap -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
  <!-- includem CSS-urile noastre -->
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/home.css" />
 
 </head>
 <body>
-<nav>
-  <div class="nav-container">
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="itschool logo"/>
+      </a>
+      <div class="menu-icon-container">
+          <ul>
+            <li>
+              <a href="pages/courses.html">Cursuri Online</a>
+            </li>
 
-  
-  <a href="index.html" class="logo-link">
-    <img src="images/logo.png" alt="itschool logo"/>
-  </a>
-  <div class="menu-icon-container">
-    <span class="material-symbols-outlined menu-icon"> menu </span>
-    <input type="checkbox" />
+            <li class="about-us">
+              <a href="pages/about.html">
+                  Despre noi
+                  <span class="material-symbols-outlined arrow-down-icon">
+                    arrow_drop_down
+                  </span>
+              </a>
+              <div class="submenu">
+                <a href="index.html">IT School</a>
+                <a href="pages/trainers.html">Traineri</a>
+                <a href="pages/about.html">Despre noi</a>
+              </div>
+            </li>
 
+            <li>
+              <a href="pages/contact.html">Contact</a>
+            </li>
+          </ul>
+      </div>
+      <!-- dropdown menu for mobile -->
+      <div class="dropdown hamburger-menu-container">
+        <button class="btn button-blue dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="material-symbols-outlined">
+            menu
+          </span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a href="pages/courses.html" class="dropdown-item"></a>Cursuri online</li>
+          <li><a href="pages/about.html" class="dropdown-item"></a>Despre noi</li>
+          <li><a href="pages/trainers.html" class="dropdown-item"></a>Traineri</li>
+          <li><a href="pages/contact.html" class="dropdown-item"></a>Contact</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <ul>
-        <li>
-          <a href="pages/courses.html"> Cursuri Online</a>
-        </li>
-        <li class="about-us">
-          <a href="pages/about.html">
-              Despre noi
-              <span class="material-symbols-outlined arrow-down-icon">
-                arrow_drop_down
-              </span>
-          </a>
-          <div class="submenu">
-            <a href="index.html">IT School</a>
-            <a href="pages/about.html">Despre noi</a>
-          </div>
-
-        </li>
-        <li>
-          <a href="pages/contact.html">Contact</a>
-        </li>
-
-    </ul>
-  </div>
-</div>
-
-</nav>
 <main>
-<section class="welcome">
-  <div class="container">
-   <h1>Bine ai venit!</h1>
-   <p>
-    Accelerator de cariere in <span>{</span>web development<span>}</span>
-   </p>
-   <p>
-    Cursuri IT pentru incepatori cu certificare
-    <img src="images/microsoft.png" alt="Microsoft" />
-    <img src="images/adobe.png" alt="Adobe" />
-    <img src="images/apple.png" alt="Apple" />
-    <img src="images/minister.png" alt="Ministerul Educatiei" />
+  <section class="welcome">
+    <div class="container">
+    <h1>Bine ai venit!</h1>
+    <p>
+      Accelerator de cariere in <span>{</span>web development<span>}</span>
+    </p>
+    <p>
+      Cursuri IT pentru incepatori cu certificare
+      <img src="images/microsoft.png" alt="Microsoft" />
+      <img src="images/adobe.png" alt="Adobe" />
+      <img src="images/apple.png" alt="Apple" />
+      <img src="images/minister.png" alt="Ministerul Educatiei" />
 
-   </p>
+    </p>
 
-    <button class="button-green"><a href="pages/courses.html">Afla mai multe</a></button>
+      <button class="button-green"><a href="pages/courses.html">Afla mai multe</a></button>
 
-  </div>
-</section>
+    </div>
+  </section>
 </main>
+
 <footer>
   <div class="container">
    <p>IT School România © 2024. Toate drepturile rezervate.</p>
   </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
 </body>
 </html>
