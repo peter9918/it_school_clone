@@ -44,22 +44,6 @@
   color: var(--text-dark);
 }
 
-.input-group-text {
-  background: 0;
-  border: 0;
-  gap: var(--spacing-small);
-}
-
-.input-group-text input[type="checkbox"] {
-  width: 2rem;
-  height: 2rem;
-  background-color: green;
-}
-
-.input-group-text label {
-  text-wrap: wrap;
-}
-
 @media only screen and (max-width: 768px) {
   .main-container {
     flex-direction: column-reverse;
