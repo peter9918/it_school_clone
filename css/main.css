@@ -19,6 +19,8 @@
   --spacing-medium: 1rem;
   --spacing-small: 0.5rem;
   --spacing-tiny: 0.25rem;
+
+  --page-max-width: 1278px;
 }
 
 * {
@@ -65,7 +67,17 @@ p {
   color: var(--text-dark);
 }
 
-/* advanced classes */
+/* advanced classes */ 
+
+.green-link {
+  display: inline;
+  color: rgb(0, 135, 104);
+}
+
+.green-link:hover {
+  color: rgb(0, 125, 114);
+}
+
 .faded-text {
   color: rgba(25, 30, 48, 0.4);
   font-size: var(--fs-medium);
@@ -110,8 +122,14 @@ p {
 }
 
 /* navigation bar */
-nav .nav-container{
+
+nav {
   background-color: var(--bg-primary);
+}
+
+nav .nav-container{
+  max-width: var(--page-max-width);
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -209,7 +227,13 @@ footer p {
   .menu-icon-container {
     display: none;
   }
+  .dropdown-menu a{
+    font-size: 1.2rem;
+  }
 }
+
+
+
 
 
 

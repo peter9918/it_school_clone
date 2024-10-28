@@ -1,7 +1,16 @@
-/* welcome section */
-.welcome {
+main {
   height: 100vh;
   background-color: var(--bg-primary);
+}
+
+/* welcome section */
+.welcome {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .welcome h1,
@@ -25,17 +34,14 @@
 .welcome img {
   height: 24px;
   width:auto;
-  margin-left: var(--spacing-medium);
   /* mutam imaginile mai jos fata de pozitia lor initiala pt a arata mai bine */
   position:relative;
   top: var(--spacing-tiny);
 }
 
 .welcome .welcome-container{
-  height:100%;
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
+  margin-left: var(--spacing-xl);
+  
 }
 
 .welcome a {

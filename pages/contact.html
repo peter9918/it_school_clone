@@ -78,74 +78,76 @@
   </div>
 
   <main>
-    <div class="main-left">
-      <form class="row g-3">
+    <div class="main-container">
+      <div class="main-left">
+        <form class="row g-3">
+          <div class="col-lg-6 col-12">
+            <label for="inputNume" class="form-label">Nume</label>
+            <input type="text" class="form-control" id="inputNume" required>
+          </div>
+          <div class="col-lg-6 col-12">
+            <label for="inputPrenume" class="form-label">Prenume</label>
+            <input type="text" class="form-control" id="inputPrenume" required>
+          </div>
+          <div class="col-lg-6 col-12">
+            <label for="inputTelefon" class="form-label">Telefon</label>
+            <input type="tel" class="form-control" id="inputTelefon" required placeholder="+40 XXX">
+          </div>
+          <div class="col-lg-6 col-12">
+            <label for="inputEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail" required>
+          </div>
+          <div class="col-12">
+            <label for="inputMessage" class="form-label">Mesaj</label>
+            <textarea id="inputMessage" class="form-control" required aria-label="With textarea"></textarea>
+          </div>
 
-        <div class="col-lg-6 col-12">
-          <label for="inputNume" class="form-label">Nume</label>
-          <input type="text" class="form-control" id="inputNume">
-        </div>
+          <div class="input-group">
+            <div class="input-group-text">
+              <input type="checkbox" required aria-label="Checkbox for following text input" id="terms-and-conditions">
+              <label for="terms-and-conditions">
+                *Prin completarea acestui formular, ești de acord cu <a href="#" class="green-link">Termenii și Condițiile</a> IT School
+              </label>
+            </div>
+          </div>
+      
+          <div class="col-12 submit-button-container">
+            <button type="submit" class="button-green">Trimite mesajul</button>
+          </div>
 
-        <div class="col-lg-6 col-12">
-          <label for="inputPrenume" class="form-label">Prenume</label>
-          <input type="text" class="form-control" id="inputPrenume">
-        </div>
+        </form>
 
-        <div class="col-lg-6 col-12">
-          <label for="inputTelefon" class="form-label">Telefon</label>
-          <input type="tel" class="form-control" id="inputTelefon" placeholder="+40 XXX">
-        </div>
-
-        <div class="col-lg-6 col-12">
-          <label for="inputEmail" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail">
-        </div>
-
-        <div class="col-12">
-          <label for="inputMessage" class="form-label">Mesaj</label>
-          <textarea id="inputMessage" class="form-control" aria-label="With textarea"></textarea>
-        </div>
-        
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary">Sign in</button>
-        </div>
-      </form>
-    </div>
-
-    <div class="main-right">
-      <h2>Informații generale</h2>
-      <p>
-        Nu ai găsit ce căutai sau ai nevoie de informații suplimentare? Alege modalitatea de comunicare preferată și contactează-ne. Îți reamintim că <a href="#">aici</a> regăsești o listă cu întrebări frecvente.
-      </p>
-
-      <ul>
-        <li>
-          <img src="https://www.itschool.ro/_next/static/media/icons-phone.c9b06e19.svg" alt="">
-          <a href="#">+40 737 880 420</a>
-        </li>
-          
-        <li>
-          <img src="https://www.itschool.ro/_next/static/media/mail-icon.d19a74cb.svg" alt="">
-          <a href="#">office@itschool.ro</a>
-        </li>
-
-        <li>
-          <img src="https://www.itschool.ro/_next/static/media/icons-pin.c54b64b4.svg" alt="">
-          <p href="#">Adress
-            Blv. General Ion Dragalina, Nr. 27, Timișoara</p>
-        </li>
-
-        <li>
-          <img src="https://www.itschool.ro/_next/static/media/icons-time.152efcdc.svg" alt="">
-          <p>Adress
-            Blv. General Ion Dragalina, Nr. 27, Timișoara</p>
-        </li>
-      </ul>
-
-      <p>
-        Înainte de a ne face o vizită la sediu, vă recomandăm să ne sunați pentru a stabili o programare. Lucrăm adesea remote și e posibil să nu fie nimeni disponibil la sediu fără o programare prealabilă. Vom fi încântați să vă întâmpinăm!
-      </p>
-
+      </div>
+      <div class="main-right">
+        <h2>Informații generale</h2>
+        <p>
+          Nu ai găsit ce căutai sau ai nevoie de informații suplimentare? Alege modalitatea de comunicare preferată și contactează-ne. Îți reamintim că <a href="#" class="green-link">aici</a> regăsești o listă cu întrebări frecvente.
+        </p>
+        <ul>
+          <li>
+            <img src="https://www.itschool.ro/_next/static/media/icons-phone.c9b06e19.svg" alt="">
+            <a href="#">+40 737 880 420</a>
+          </li>
+      
+          <li>
+            <img src="https://www.itschool.ro/_next/static/media/mail-icon.d19a74cb.svg" alt="">
+            <a href="#">office@itschool.ro</a>
+          </li>
+          <li>
+            <img src="https://www.itschool.ro/_next/static/media/icons-pin.c54b64b4.svg" alt="">
+            <p href="#">Adress
+              Blv. General Ion Dragalina, Nr. 27, Timișoara</p>
+          </li>
+          <li>
+            <img src="https://www.itschool.ro/_next/static/media/icons-time.152efcdc.svg" alt="">
+            <p>Adress
+              Blv. General Ion Dragalina, Nr. 27, Timișoara</p>
+          </li>
+        </ul>
+        <p>
+          Înainte de a ne face o vizită la sediu, vă recomandăm să ne sunați pentru a stabili o programare. Lucrăm adesea remote și e posibil să nu fie nimeni disponibil la sediu fără o programare prealabilă. Vom fi încântați să vă întâmpinăm!
+        </p>
+      </div>
     </div>
   </main>
   

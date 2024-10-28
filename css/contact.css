@@ -1,6 +1,3 @@
-body {
-  height: 100vh;
-}
 
 .hero {
   background-color: var(--bg-primary);
@@ -10,32 +7,34 @@ body {
   align-items: center;
 }
 
-main {
+.main-container {
+  max-width: var(--page-max-width);
+  margin: var(--spacing-large) auto;
+  background-color: var(--bg-secondary);
   display: flex;
   gap: var(--spacing-large);
   padding: var(--spacing-medium);
+  border-radius: 2rem;
 }
-
-
 
 .main-right {
   display: flex;
   flex-direction: column;
 }
 
-.main-right p a {
-  display: inline;
-  color: rgb(0, 135, 104);
-}
-
 .main-right img {
   width: 2rem;
 }
 
+.main-right ul {
+  margin-bottom: var(--spacing-medium);
+}
+
 .main-right ul li {
+  margin-bottom: var(--spacing-medium);
   display: flex;
   align-items: center;
-  gap: var(--spacing-small);
+  gap: var(--spacing-medium);
 }
 
 .main-right ul a,
@@ -45,10 +44,32 @@ main {
   color: var(--text-dark);
 }
 
-@media (max-width: 768px) {
-  main {
-    flex-wrap: wrap;
+.input-group-text {
+  background: 0;
+  border: 0;
+  gap: var(--spacing-small);
+}
+
+.input-group-text input[type="checkbox"] {
+  width: 2rem;
+  height: 2rem;
+  background-color: green;
+}
+
+.input-group-text label {
+  text-wrap: wrap;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-container {
+    flex-direction: column-reverse;
   }
-  
+  .submit-button-container {
+    display: flex;
+    justify-content: center;
+  }
+  .main-container {
+    margin: var(--spacing-medium) var(--spacing-medium);
+  }
 }
 
